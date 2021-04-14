@@ -103,4 +103,23 @@ json_resp = json.loads(resp.text)
 for i, item in enumerate(json_resp):
     print()
     print(i, item['title'])
+    
+    
+#Python Interview Preparation
+#Keep it going.
+
+def non_decreasing(a: list[int]) -> bool:
+    count = 0
+    for i in range(len(a)-1):
+        if a[i] > a[i+1]:
+            count += 1
+        if count > 1:
+            return False
+    return True
+
+
+print(non_decreasing([4, 5, 7, 11, 9, 10, 11, 8]))
+
+
+
 
